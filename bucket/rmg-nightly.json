@@ -1,0 +1,27 @@
+{
+    "version": "0.9.0-26",
+    "description": "RMG - Rosalie's Mupen GUI, Nintendo 64 emulator (master branch builds)",
+    "homepage": "https://github.com/Rosalie241/RMG",
+    "license": "GPL-3.0-only",
+    "url": "https://nightly.link/Rosalie241/RMG/workflows/build/master/RMG-Portable-Windows64-v0.9.0-26-g4777ed3f.zip",
+    "hash": "c3a3c47c1e7d21f97a978f4bc258c8aeaa31ba8f40b0fc7f92b1b6990e313552",
+    "bin": "RMG.exe",
+    "shortcuts": [
+        [
+            "RMG.exe",
+            "RMG (master)"
+        ]
+    ],
+    "persist": [
+        "Config",
+        "Save",
+        "Screenshots"
+    ],
+    "checkver": {
+        "url": "https://nightly.link/Rosalie241/RMG/workflows/build/master",
+        "regex": "RMG-Portable-Windows64-v(?<version>\\d+\\.\\d+\\.\\d+-\\d+)-g(?<hash>[0-9a-f]+)\\.zip"
+    },
+    "autoupdate": {
+        "url": "https://nightly.link/Rosalie241/RMG/workflows/build/master/RMG-Portable-Windows64-v$version-g$matchHash.zip"
+    }
+}
