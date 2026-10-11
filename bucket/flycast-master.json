@@ -1,0 +1,34 @@
+{
+    "version": "2026.10.07.1204",
+    "description": "Flycast - Sega Dreamcast, Naomi and Atomiswave emulator (master branch builds)",
+    "homepage": "https://github.com/flyinghead/flycast",
+    "license": "GPL-2.0-only",
+    "url": "https://flycast-builds.s3.fr-par.scw.cloud/win/heads/master-0d9853df9a917eba2f7a84158bd1c3bccb8933e8/flycast.zip",
+    "hash": "ade53a4df99a3ac34f1acea1a12448f4f022e59280a96b0be202972ca52d87f8",
+    "pre_install": "if (!(Test-Path \"$persist_dir\\emu.cfg\")) { New-Item -ItemType File \"$dir\\emu.cfg\" | Out-Null }",
+    "bin": "flycast.exe",
+    "shortcuts": [
+        [
+            "flycast.exe",
+            "Flycast"
+        ]
+    ],
+    "persist": [
+        "emu.cfg",
+        "data",
+        "mappings"
+    ],
+    "checkver": {
+        "script": [
+            "$xml = [xml](Invoke-WebRequest 'https://flycast-builds.s3.fr-par.scw.cloud/?prefix=win/heads/master-' -UseBasicParsing).Content",
+            "$latest = $xml.ListBucketResult.Contents | Sort-Object { [datetime]$_.LastModified } -Descending | Select-Object -First 1",
+            "$hash = ($latest.Key.Trim() -split '/')[2] -replace '^master-', ''",
+            "$ver = ([datetime]$latest.LastModified).ToUniversalTime().ToString('yyyy.MM.dd.HHmm')",
+            "Write-Output \"$ver $hash\""
+        ],
+        "regex": "(\\S+) (?<hash>[0-9a-f]{40})"
+    },
+    "autoupdate": {
+        "url": "https://flycast-builds.s3.fr-par.scw.cloud/win/heads/master-$matchHash/flycast.zip"
+    }
+}
