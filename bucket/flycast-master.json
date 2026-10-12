@@ -1,10 +1,10 @@
 {
-    "version": "2026.10.07.1204",
+    "version": "2026.10.12.0808",
     "description": "Flycast - Sega Dreamcast, Naomi and Atomiswave emulator (master branch builds)",
     "homepage": "https://github.com/flyinghead/flycast",
     "license": "GPL-2.0-only",
-    "url": "https://flycast-builds.s3.fr-par.scw.cloud/win/heads/master-0d9853df9a917eba2f7a84158bd1c3bccb8933e8/flycast.zip",
-    "hash": "ade53a4df99a3ac34f1acea1a12448f4f022e59280a96b0be202972ca52d87f8",
+    "url": "https://flycast-builds.s3.fr-par.scw.cloud/win/heads/master-f03faffd2f89cb2c7c73ff08dce51a774a61ee27/flycast.zip",
+    "hash": "8dd7c98b184513c1d236f0cc174d9f6785467823f94923d247ad24b40242606d",
     "pre_install": "if (!(Test-Path \"$persist_dir\\emu.cfg\")) { New-Item -ItemType File \"$dir\\emu.cfg\" | Out-Null }",
     "bin": "flycast.exe",
     "shortcuts": [
