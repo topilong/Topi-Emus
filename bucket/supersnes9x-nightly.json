@@ -1,0 +1,37 @@
+{
+    "version": "2026.10.11.1012",
+    "description": "SuperSnes9x - Snes9x fork with Kaillera netplay, RetroAchievements and more (nightly builds)",
+    "homepage": "https://github.com/shanytc/snes9x",
+    "license": {
+        "identifier": "Freeware",
+        "url": "https://github.com/shanytc/snes9x/blob/master/LICENSE"
+    },
+    "url": "https://github.com/shanytc/snes9x/releases/download/nightly/super-snes9x-nightly-win32-x64.zip",
+    "hash": "dc96297b8cfe49e43d98f29e36d5f7a058225590bdbda8ec2816cad8540a43b2",
+    "pre_install": "if (!(Test-Path \"$persist_dir\\super-snes9x.conf\")) { New-Item -ItemType File \"$dir\\super-snes9x.conf\" | Out-Null }",
+    "shortcuts": [
+        [
+            "super-snes9x-x64.exe",
+            "SuperSnes9x (nightly)"
+        ]
+    ],
+    "persist": [
+        "super-snes9x.conf",
+        "Saves",
+        "Screenshots",
+        "Movies",
+        "SPCs",
+        "Cheats",
+        "SatData",
+		"Patches"
+    ],
+    "checkver": {
+        "url": "https://api.github.com/repos/shanytc/snes9x/releases/tags/nightly",
+        "jsonpath": "$.assets[?(@.name == 'super-snes9x-nightly-win32-x64.zip')].updated_at",
+        "regex": "(\\d{4})-(\\d{2})-(\\d{2})T(\\d{2}):(\\d{2})",
+        "replace": "${1}.${2}.${3}.${4}${5}"
+    },
+    "autoupdate": {
+        "url": "https://github.com/shanytc/snes9x/releases/download/nightly/super-snes9x-nightly-win32-x64.zip"
+    }
+}
