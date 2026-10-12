@@ -23,7 +23,7 @@
         "SPCs",
         "Cheats",
         "SatData",
-		"Patches"
+        "Patches"
     ],
     "checkver": {
         "url": "https://api.github.com/repos/shanytc/snes9x/releases/tags/nightly",
