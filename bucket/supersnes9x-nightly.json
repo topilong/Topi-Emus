@@ -1,5 +1,5 @@
 {
-    "version": "2026.10.12.1100",
+    "version": "2026.10.18.0811",
     "description": "SuperSnes9x - Snes9x fork with Kaillera netplay, RetroAchievements and more (nightly builds)",
     "homepage": "https://github.com/shanytc/snes9x",
     "license": {
@@ -7,7 +7,7 @@
         "url": "https://github.com/shanytc/snes9x/blob/master/LICENSE"
     },
     "url": "https://github.com/shanytc/snes9x/releases/download/nightly/super-snes9x-nightly-win32-x64.zip",
-    "hash": "0da17170bc397a385abce463684d1436c2325083be8cc7ce700b352ef4f18eee",
+    "hash": "8c518d574a3aafbaab027a88faae0889f2566e6ebeb6731ef79a036956fb0567",
     "pre_install": "if (!(Test-Path \"$persist_dir\\super-snes9x.conf\")) { New-Item -ItemType File \"$dir\\super-snes9x.conf\" | Out-Null }",
     "shortcuts": [
         [
