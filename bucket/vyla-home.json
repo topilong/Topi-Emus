@@ -1,0 +1,36 @@
+{
+    "version": "1.1.43",
+    "description": "Vyla Home - desktop companion app for the Vyla media ecosystem (Tauri)",
+    "homepage": "https://gitlab.com/vyla-entertainment/home",
+    "license": {
+        "identifier": "VHAL-1.0",
+        "url": "https://gitlab.com/vyla-entertainment/home/-/blob/main/LICENSE"
+    },
+    "url": "https://gitlab.com/api/v4/projects/vyla-entertainment%2Fhome/packages/generic/vyla-home/v1.1.43/Vyla-Home_1.1.43_x64-setup-1791761540723.exe#/setup.exe",
+    "hash": "3cd19f86e964ba8ca66cd04c9128e209f775468c013d9b58187974b5b6b76d20",
+    "installer": {
+        "file": "setup.exe",
+        "args": [
+            "/S",
+            "/D=$dir"
+        ]
+    },
+    "uninstaller": {
+        "file": "uninstall.exe",
+        "args": [
+            "/S",
+            "_?=$dir"
+        ]
+    },
+    "checkver": {
+        "script": [
+            "$r = @(Invoke-RestMethod 'https://gitlab.com/api/v4/projects/vyla-entertainment%2Fhome/releases?per_page=1')[0]",
+            "$link = $r.assets.links | Where-Object { $_.name -like '*x64-setup*.exe' } | Select-Object -First 1",
+            "Write-Output $link.url"
+        ],
+        "regex": "/v(?<version>\\d+\\.\\d+\\.\\d+)/(?<file>[^/\\s]+\\.exe)"
+    },
+    "autoupdate": {
+        "url": "https://gitlab.com/api/v4/projects/vyla-entertainment%2Fhome/packages/generic/vyla-home/v$version/$matchFile#/setup.exe"
+    }
+}
