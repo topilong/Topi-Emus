@@ -1,10 +1,10 @@
 {
-    "version": "1.16",
+    "version": "1.16.1",
     "description": "Nuvio HTPC - Windows media client with TV mode, adaptive hero and keyboard controls (UmbraProjects fork of Nuvio Desktop)",
     "homepage": "https://github.com/UmbraProjects/NuvioDesktop",
     "license": "GPL-3.0-only",
-    "url": "https://github.com/UmbraProjects/NuvioDesktop/releases/download/v1.16/Nuvio.zip",
-    "hash": "a9360b26263e31509befdb830b9012659efbeb2ccc87dc5901a31cc97f1f2e61",
+    "url": "https://github.com/UmbraProjects/NuvioDesktop/releases/download/v1.16.1/Nuvio.zip",
+    "hash": "c3a40daca93d29b32dae3fa03e362d53ee2bf1c0a3997b35471d78d0accfd9e1",
     "extract_dir": "Nuvio",
     "shortcuts": [
         [
