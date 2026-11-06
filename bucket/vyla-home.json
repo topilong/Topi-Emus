@@ -1,13 +1,13 @@
 {
-    "version": "1.1.57",
+    "version": "1.1.58",
     "description": "Vyla Home - desktop companion app for the Vyla media ecosystem (Tauri)",
     "homepage": "https://gitlab.com/vyla-entertainment/home",
     "license": {
         "identifier": "VHAL-1.0",
         "url": "https://gitlab.com/vyla-entertainment/home/-/blob/main/LICENSE"
     },
-    "url": "https://gitlab.com/api/v4/projects/vyla-entertainment%2Fhome/packages/generic/vyla-home/v1.1.57/Vyla-Home_1.1.57_x64-setup-1793856333418.exe#/setup.exe",
-    "hash": "d61b9939058bd63609032abdb8def2a512cf38285c1d6ea830678dbfd6307ffa",
+    "url": "https://gitlab.com/api/v4/projects/vyla-entertainment%2Fhome/packages/generic/vyla-home/v1.1.58/Vyla-Home_1.1.58_x64-setup-1793935700071.exe#/setup.exe",
+    "hash": "ca9a28ee12dd9180c74b44347c3395bbd1287cf668774e68b5e682c2f4abda29",
     "installer": {
         "file": "setup.exe",
         "args": [
